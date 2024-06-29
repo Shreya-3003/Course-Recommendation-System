@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Home page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Nunito:wght@200;300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* height: 100vh;
+        width: 100%; */
+        background: linear-gradient(
+          45deg,
+          rgb(55, 55, 131),
+          rgb(213, 110, 213)
+        );
+        width: 100%;
+        height: 100vh;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(17px);
+        --webkit-backdrop-filter: blur(17px);
+        border-radius: 1px solid rgba(255, 255, 255, 0.7);
+        transition: width 0.3s ease;
+      }
+      .sidebar:hover {
+        width: 260px;
+      }
+
+      .sidebar .logo {
+        color: #000;
+        display: flex;
+        align-items: center;
+        padding: 25px 10px 15px;
+      }
+      .logo h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-left: 15px;
+        display: none;
+      }
+      .sidebar:hover .logo h2 {
+        display: block;
+      }
+      .logo img {
+        width: 60px;
+        border-radius: 50%;
+      }
+
+      .sidebar .links {
+        list-style: none;
+        margin-top: 20px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        height: calc(100% - 140px);
+      }
+      .sidebar .links::-webkit-scrollbar {
+        display: none;
+      }
+      .links li {
+        display: flex;
+        border-radius: 4px;
+        align-items: center;
+      }
+      .links li:hover {
+        cursor: pointer;
+        background-color: #6a3ec2;
+      }
+      .links .material-symbols-outlined {
+        font-weight: bold;
+        padding-bottom: 20px;
+        font-size: 25px;
+      }
+      .links hr {
+        margin: 10px 8px;
+        border: 1px solid #4c4c4c;
+      }
+      .sidebar:hover .links hr {
+        border-color: transparent;
+      }
+      .links li a {
+        /* padding: 10px; */
+        padding-left: 12px;
+        padding-bottom: 20px;
+        color: #000;
+        display: none;
+        font-weight: 600;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      .sidebar:hover .links li a {
+        display: block;
+      }
+      .links .logout-link {
+        margin-top: 20px;
+        font-weight: bolder;
+      }
+
+      /* hero */
+      /* .hero{
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png),url(images/bg-dot.png),url(images/bg-round.png),url(images/bg-tree.png);
+  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  background-repeat: no-repeat;
+} */
+      .curveImg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        pointer-events: none;
+      }
+      .hero .row {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        padding: 0 60px;
+        gap: 30px;
+        justify-content: space-between;
+      }
+      .hero .row h2,
+      .hero .row p {
+        color: #fff;
+        margin-left: 210px;
+      }
+      .hero .row p {
+        font-family: "General Sans-Medium";
+        font-weight: 200;
+        font-size: 1.5vw;
+      }
+      .hero .row h2 {
+        font-family: "General Sans Medium";
+        font-size: 3.4vw;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1;
+        opacity: 0.8;
+        margin-bottom: 16px;
+      }
+      .hero .column {
+        width: 50%;
+      }
+      .hero_img {
+        width: 95%;
+        z-index: 10;
+        position: relative;
+        border: none;
+        border-radius: 80%;
+        opacity: 0.7;
+        margin-left: 25px;
+        /* filter: grayscale(100%);
+  cursor: pointer;
+  transition: 0.5s ease; */
+      }
+      /* .hero_img:hover{
+  transform: scale(1.1);
+  filter: grayscale(0%);
+} */
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <!-- nav bar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+          <h2>Course Recommendation</h2>
+        </div>
+        <ul class="links">
+          <!-- <h4>Main Menu</h4> -->
+          <li>
+            <span class="material-symbols-outlined"
+              ><i class="bx bxs-home"></i
+            ></span>
+            <a href="Home1.html">Home</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"
+              ><i class="bx bxl-discourse"></i
+            ></span>
+            <a href="Courses.html" target="_blank">Courses</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined"
+              ><i class="bx bxs-graduation"></i
+            ></span>
+            <a href="college.html">College</a>
+          </li>
+          
+          <li>
+            <span class="material-symbols-outlined"
+              ><i class="bx bxs-contact"></i
+            ></span>
+            <a href="Contact.html">Contact us</a>
+          </li>
+          <li class="logout-link">
+            <span class="material-symbols-outlined"
+              ><i class="bx bxs-comment-edit"></i>
+            </span>
+            <a href="feedback.html">Feedback</a>
+          </li>
+          <li class="logout-link">
+            <span class="material-symbols-outlined"
+              ><i class="bx bx-log-out-circle"></i>
+            </span>
+            <a href="welcome.html">Logout</a>
+          </li>
+        </ul>
+      </aside>
+      <!-- navbar end -->
+      <!-- hero -->
+      <section class="hero">
+        <div class="row container">
+          <div class="column">
+            <h2>
+              Course Recommendation <br />
+              after 10th class.
+            </h2>
+            <p>
+              Choosing a stream after the 10th standard is a pivotal decision
+              that sets the foundation for a student's academic and career
+              journey.Choosing the right stream depends on a student's
+              interests, strengths, and future aspirations.
+            </p>
+          </div>
+          <div class="column">
+            <img src="images/hero4.jpg" alt="" class="hero_img" />
+          </div>
+        </div>
+        <!-- <img src="images/bg-bottom-hero.png" alt="" class="curveImg" /> -->
+      </section>
+      <!-- heroend -->
+    </form>
+  </body>
+</html>

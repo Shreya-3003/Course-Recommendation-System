@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User & admin</title>
+  </head>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aladin&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .intro {
+      background: linear-gradient(45deg, rgb(55, 55, 131), rgb(213, 110, 213));
+      width: 100%;
+      height: 100vh;
+      /* height: 660px; */
+    }
+    .row {
+      width: 101%;
+    }
+    .text .fc {
+      letter-spacing: 3px;
+      font-family: "Aladin", cursive;
+      font-size: 45px;
+      position: inline;
+      margin-top: 220px;
+      padding-left: 210px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 240px;
+      height: 30px;
+      outline: none;
+      border: 0.5px solid #222;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    .button-login {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 60px;
+      padding-right: 60px;
+      color: #bbb;
+      text-decoration: none;
+      border-radius: 10px;
+      background: #666;
+      margin-left: 210px;
+      margin-top: 30px;
+    }
+    .button-login:hover {
+      box-shadow: 5px 5px 10px #999;
+      color: #fff;
+    }
+    img {
+      height: 500px;
+      width: 700px;
+      margin-left: 700px;
+      margin-top: -295px;
+      border-radius: 80%;
+      opacity: 0.8;
+    }
+    .modal-title {
+      margin-left: 140px;
+      font-size: 45px;
+      letter-spacing: 2px;
+      font-family: "Teko", sans-serif;
+    }
+    .modal-body {
+      margin-left: 120px;
+    }
+    .btn {
+      margin-top: 10px;
+      width: 240px;
+    }
+    .foot {
+      margin-bottom: 20px;
+    }
+    .new-acc {
+      text-decoration: none;
+      position: relative;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgb(8, 70, 157);
+      top: 20px;
+    }
+    .new-acc:hover {
+      color: #ff0000;
+    }
+  </style>
+
+  <body>
+    <section class="intro">
+      <div class="intro">
+        <div class="row">
+          <div class="col-md-6 text">
+            <h1 class="fc">Course Recommendation</h1>
+            <span
+              type="button"
+              class="button-login"
+              data-toggle="modal"
+              data-target="#staticBackdrop"
+            >
+              <i class="bx bxs-lock"></i>
+              USER LOGIN
+            </span>
+
+            <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-backdrop="static"
+              data-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                      <b>User Login</b>
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="./php/Login.php" method="post">
+                      <label>
+                        <i class="bx bxs-user"></i>
+                        Username
+                      </label>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Username"
+                          name="username"
+                          required
+                        />
+                      </div>
+
+                      <label>
+                        <i class="bx bxs-key"></i>
+                        Password
+                      </label>
+                      <div>
+                        <input
+                          type="password"
+                          placeholder="Password"
+                          name="password"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <button class="btn btn-dark">
+                          <i class="bx bxs-lock"></i>
+                          Login
+                        </button>
+                      </div>
+
+                      <div class="foot">
+                        <a href="./php/Register.php" class="new-acc">
+                          I don't have an account!!!
+                        </a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ... (Your existing code) ... -->
+
+            <!-- Add a new button for Admin Login -->
+            <span
+              type="button"
+              class="button-login"
+              data-toggle="modal"
+              data-target="#adminLoginModal"
+            >
+              <i class="bx bxs-lock"></i>
+              ADMIN LOGIN
+            </span>
+
+            <!-- Admin Login Modal -->
+            <div
+              class="modal fade"
+              id="adminLoginModal"
+              data-backdrop="static"
+              data-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="adminLoginModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="adminLoginModalLabel">
+                      <b>Admin Login</b>
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="php/adminLogin.php" method="post">
+                      <label>
+                        <i class="bx bxs-user"></i>
+                        Username
+                      </label>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Username"
+                          name="username"
+                          required
+                        />
+                      </div>
+
+                      <label>
+                        <i class="bx bxs-key"></i>
+                        Password
+                      </label>
+                      <div>
+                        <input
+                          type="password"
+                          placeholder="Password"
+                          name="password"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <button class="btn btn-dark">
+                          <i class="bx bx-lock-alt"></i>
+                          Login
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="images/hero3.jpg" col-md-6 />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

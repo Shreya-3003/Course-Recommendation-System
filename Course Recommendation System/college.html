@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <title>Explore Colleges</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Nunito:wght@200;300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap");
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(
+          45deg,
+          rgb(55, 55, 131),
+          rgb(213, 110, 213)
+        );
+        width: 100%;
+        height: 100vh;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(17px);
+        --webkit-backdrop-filter: blur(17px);
+        border-radius: 1px solid rgba(255, 255, 255, 0.7);
+        transition: width 0.3s ease;
+      }
+      .sidebar:hover {
+        width: 260px;
+      }
+
+      .sidebar .logo {
+        color: #000;
+        display: flex;
+        align-items: center;
+        padding: 25px 10px 15px;
+      }
+      .logo h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-left: 15px;
+        display: none;
+      }
+      .sidebar:hover .logo h2 {
+        display: block;
+      }
+      .logo img {
+        width: 60px;
+        border-radius: 50%;
+      }
+
+      .sidebar .links {
+        list-style: none;
+        margin-top: 20px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        height: calc(100% - 140px);
+      }
+      .sidebar .links::-webkit-scrollbar {
+        display: none;
+      }
+      .links li {
+        display: flex;
+        border-radius: 4px;
+        align-items: center;
+        margin-right: 25px;
+      }
+      .links li:hover {
+        cursor: pointer;
+        background-color: #6a3ec2;
+      }
+      .links .material-symbols-outlined {
+        font-weight: bold;
+        padding-bottom: 20px;
+        font-size: 25px;
+      }
+      .links hr {
+        margin: 10px 8px;
+        border: 1px solid #4c4c4c;
+      }
+      .sidebar:hover .links hr {
+        border-color: transparent;
+      }
+      .links li a {
+        /* padding: 10px; */
+        padding-left: 12px;
+        padding-bottom: 20px;
+        color: #000;
+        display: none;
+        font-weight: 600;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      .sidebar:hover .links li a {
+        display: block;
+      }
+      .links .logout-link {
+        margin-top: 20px;
+        font-weight: bolder;
+      }
+      /* cards */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .row {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .col-sm-6 {
+        text-align: center;
+        margin-left: 450px;
+        margin-top: 130px;
+      }
+
+      .card {
+        background-image: linear-gradient(#4d99b4, rgb(160, 35, 219));
+        border: none;
+        border-radius: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        width: 100%;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: #fff; /* Adjust text color as needed */
+      }
+      .btn-primary {
+        background-color: #200ac5;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #6a3ec2;
+      }
+
+      /* Adjusting the spacing between cards */
+      .col-sm-6:not(:last-child) {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+        <h2>Course Recommendation</h2>
+      </div>
+      <ul class="links">
+        <li>
+          <span class="material-symbols-outlined"
+            ><i class="bx bxs-home"></i
+          ></span>
+          <a href="Home1.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined"
+            ><i class="bx bxl-discourse"></i
+          ></span>
+          <a href="Courses.html">Courses</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined"
+            ><i class="bx bxs-graduation"></i
+          ></span>
+          <a href="college.html">College</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined"
+            ><i class="bx bxs-contact"></i
+          ></span>
+          <a href="Contact.html" target="_blank">Contact us</a>
+        </li>
+        <li class="logout-link">
+          <span class="material-symbols-outlined"
+            ><i class="bx bxs-comment-edit"></i>
+          </span>
+          <a href="feedback.html">Feedback</a>
+        </li>
+        <li class="logout-link">
+          <span class="material-symbols-outlined"
+            ><i class="bx bx-log-out-circle"></i>
+          </span>
+          <a href="#">Logout</a>
+        </li>
+      </ul>
+    </aside>
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Colleges after 10th</h5>
+            <p class="card-text">
+              In the below link you will get best for junior collges. It will
+              help you to find the best colleges.
+            </p>
+            <a
+              href="https://www.brainwonders.in/blog/top-10-junior-colleges-in-mumbai"
+              class="btn btn-primary"
+              >Junior Collges</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Colleges after 12th</h5>
+            <p class="card-text">
+              In the below link you will get best for Degree collges. It will
+              help you to find the best colleges.
+            </p>
+            <a
+              href="https://university.careers360.com/colleges/list-of-degree-colleges-in-mumbai"
+              class="btn btn-primary"
+              >Degree Collges</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

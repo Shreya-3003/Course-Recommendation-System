@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptitude Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(
+          45deg,
+          rgb(55, 55, 131),
+          rgb(213, 110, 213)
+        );
+        width: 100%;
+        height: 100%;
+      }
+
+      .container {
+        max-width: 800px;
+      }
+
+      h2 {
+        font-weight: 800;
+        font-family: "General Sans-Medium";
+        background-color: black;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+
+      .questions {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .question-card {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.951);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .question-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="php/questionsa.php" method="post">
+      <h2 class="text-center mb-4">Aptitude Questions</h2>
+      <div class="container">
+        <div class="questions" id="questions">
+          <!-- Questions will be dynamically added here -->
+          <!-- Science Stream Questions -->
+          <div class="question-card">
+            <label for="science-question1" required
+              >If all birds have feathers, and a robin is a bird, what can you
+              conclude?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="science-option1-1"
+                name="science-question1"
+                value="All birds are robins"
+                required
+              />
+              <label for="science-option1-1">All birds are robins</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option1-2"
+                name="science-question1"
+                value="All robins have feathers"
+                required
+              />
+              <label for="science-option1-2">All robins have feathers</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option1-3"
+                name="science-question1"
+                value="Some birds are not robins"
+                required
+              />
+              <label for="science-option1-3">Some birds are not robins</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option1-4"
+                name="science-question1"
+                value="All feathered creatures are robins"
+                required
+              />
+              <label for="science-option1-4"
+                >All feathered creatures are robins</label
+              >
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="science-question2" required
+              >What is the value of (3 + 5) x (2 - 1)?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="science-option2-1"
+                name="science-question2"
+                value="4"
+                required
+              />
+              <label for="science-option2-1">4</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option2-2"
+                name="science-question2"
+                value="8"
+                required
+              />
+              <label for="science-option2-2">8</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option2-3"
+                name="science-question2"
+                value="7"
+                required
+              />
+              <label for="science-option2-3">7</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option2-4"
+                name="science-question2"
+                value="10"
+                required
+              />
+              <label for="science-option2-4">10</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="science-question3" required
+              >Which gas do plants primarily absorb during
+              photosynthesis?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="science-option3-1"
+                name="science-question3"
+                value="Carbon dioxide"
+                required
+              />
+              <label for="science-option3-1">Carbon dioxide</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option3-2"
+                name="science-question3"
+                value="Oxygen"
+                required
+              />
+              <label for="science-option3-2">Oxygen</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option3-3"
+                name="science-question3"
+                value="Nitrogen"
+                required
+              />
+              <label for="science-option3-3">Nitrogen</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option3-4"
+                name="science-question3"
+                value="Helium"
+                required
+              />
+              <label for="science-option3-4">Helium</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="science-question4" required
+              >What is the SI unit of electric current?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="science-option4-1"
+                name="science-question4"
+                value="Volt"
+                required
+              />
+              <label for="science-option4-1">Volt</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option4-2"
+                name="science-question4"
+                value="Watt"
+                required
+              />
+              <label for="science-option4-2">Watt</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option4-3"
+                name="science-question4"
+                value="Ampere"
+                required
+              />
+              <label for="science-option4-3">Ampere</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option4-4"
+                name="science-question4"
+                value="Ohm"
+                required
+              />
+              <label for="science-option4-4">Ohm</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="science-question5" required
+              >What is the function of the heart in the human body?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="science-option5-1"
+                name="science-question5"
+                value="Digestion"
+                required
+              />
+              <label for="science-option5-1">Digestion</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option5-2"
+                name="science-question5"
+                value="Pumping blood"
+                required
+              />
+              <label for="science-option5-2">Pumping blood</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option5-3"
+                name="science-question5"
+                value="Breathing"
+                required
+              />
+              <label for="science-option5-3">Breathing</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="science-option5-4"
+                name="science-question5"
+                value="Producing hormones"
+                required
+              />
+              <label for="science-option5-4">Producing hormones</label>
+            </div>
+          </div>
+          <!-- More Science Stream Questions Here -->
+
+          <!-- Commerce Stream Questions -->
+          <div class="question-card">
+            <label for="commerce-question1" required
+              >What does ROI stand for in business?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="commerce-option1-1"
+                name="commerce-question1"
+                value="Return on Investment"
+                required
+              />
+              <label for="commerce-option1-1">Return on Investment</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option1-2"
+                name="commerce-question1"
+                value="Rate of Interest"
+                required
+              />
+              <label for="commerce-option1-2">Rate of Interest</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option1-3"
+                name="commerce-question1"
+                value="Revenue of Income"
+                required
+              />
+              <label for="commerce-option1-3">Revenue of Income</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option1-4"
+                name="commerce-question1"
+                value="Risk of Investment"
+                required
+              />
+              <label for="commerce-option1-4">Risk of Investment</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="commerce-question2" required
+              >If the price of a product increases, what happens to
+              demand?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="commerce-option2-1"
+                name="commerce-question2"
+                value="Increases"
+                required
+              />
+              <label for="commerce-option2-1">Increases</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option2-2"
+                name="commerce-question2"
+                value="Decreases"
+                required
+              />
+              <label for="commerce-option2-2">Decreases</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option2-3"
+                name="commerce-question2"
+                value="Remains unchanged"
+                required
+              />
+              <label for="commerce-option2-3">Remains unchanged</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option2-4"
+                name="commerce-question2"
+                value="Becomes elastic"
+                required
+              />
+              <label for="commerce-option2-4">Becomes elastic</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="commerce-question3" required
+              >What is the formula for calculating profit?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="commerce-option3-1"
+                name="commerce-question3"
+                value="Profit = Revenue - Expenses"
+                required
+              />
+              <label for="commerce-option3-1"
+                >Profit = Revenue - Expenses</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option3-2"
+                name="commerce-question3"
+                value="Profit = Revenue + Expenses"
+                required
+              />
+              <label for="commerce-option3-2"
+                >Profit = Revenue + Expenses</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option3-3"
+                name="commerce-question3"
+                value="Profit = Revenue / Expenses"
+                required
+              />
+              <label for="commerce-option3-3"
+                >Profit = Revenue / Expenses</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option3-4"
+                name="commerce-question3"
+                value="Profit = Revenue * Expenses"
+                required
+              />
+              <label for="commerce-option3-4"
+                >Profit = Revenue * Expenses</label
+              >
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="commerce-question4" required
+              >What is the term for the difference between a company's revenue
+              and expenses?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="commerce-option4-1"
+                name="commerce-question4"
+                value="Debt"
+                required
+              />
+              <label for="commerce-option4-1">Debt</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option4-2"
+                name="commerce-question4"
+                value="Profit"
+                required
+              />
+              <label for="commerce-option4-2">Profit</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option4-3"
+                name="commerce-question4"
+                value="Liability"
+                required
+              />
+              <label for="commerce-option4-3">Liability</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option4-4"
+                name="commerce-question4"
+                value="Equity"
+                required
+              />
+              <label for="commerce-option4-4">Equity</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="commerce-question5" required
+              >If all managers are leaders and John is a manager, is John also a
+              leader?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="commerce-option5-1"
+                name="commerce-question5"
+                value="Yes"
+                required
+              />
+              <label for="commerce-option5-1">Yes</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commerce-option5-2"
+                name="commerce-question5"
+                value="No"
+                required
+              />
+              <label for="commerce-option5-2">No</label>
+            </div>
+          </div>
+          <!-- More Commerce Stream Questions Here -->
+
+          <!-- Arts Stream Questions -->
+          <div class="question-card">
+            <label for="arts-question1" required
+              >Who wrote the play 'Romeo and Juliet'?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="arts-option1-1"
+                name="arts-question1"
+                value="William Shakespeare"
+                required
+              />
+              <label for="arts-option1-1">William Shakespeare</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option1-2"
+                name="arts-question1"
+                value="Charles Dickens"
+                required
+              />
+              <label for="arts-option1-2">Charles Dickens</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option1-3"
+                name="arts-question1"
+                value="Jane Austen"
+                required
+              />
+              <label for="arts-option1-3">Jane Austen</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option1-4"
+                name="arts-question1"
+                value="Mark Twain"
+                required
+              />
+              <label for="arts-option1-4">Mark Twain</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="arts-question2" required
+              >Which of the following art forms is characterized by lines and
+              shapes without the use of color?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="arts-option2-1"
+                name="arts-question2"
+                value="Drawing"
+                required
+              />
+              <label for="arts-option2-1">Drawing</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option2-2"
+                name="arts-question2"
+                value="Watercolor painting"
+                required
+              />
+              <label for="arts-option2-2">Watercolor painting</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option2-3"
+                name="arts-question2"
+                value="Sculpture"
+                required
+              />
+              <label for="arts-option2-3">Sculpture</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option2-4"
+                name="arts-question2"
+                value="Photography"
+                required
+              />
+              <label for="arts-option2-4">Photography</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="arts-question3" required
+              >The Renaissance was a cultural movement that flourished during
+              which historical period?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="arts-option3-1"
+                name="arts-question3"
+                value="16th century"
+                required
+              />
+              <label for="arts-option3-1">16th century</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option3-2"
+                name="arts-question3"
+                value="Ancient Greece"
+                required
+              />
+              <label for="arts-option3-2">Ancient Greece</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option3-3"
+                name="arts-question3"
+                value="Middle Ages"
+                required
+              />
+              <label for="arts-option3-3">Middle Ages</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option3-4"
+                name="arts-question3"
+                value="19th century"
+                required
+              />
+              <label for="arts-option3-4">19th century</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="arts-question4" required
+              >What is the name for a musical composition for a solo instrument
+              accompanied by an orchestra?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="arts-option4-1"
+                name="arts-question4"
+                value="Symphony"
+                required
+              />
+              <label for="arts-option4-1">Symphony</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option4-2"
+                name="arts-question4"
+                value="Opera"
+                required
+              />
+              <label for="arts-option4-2">Opera</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option4-3"
+                name="arts-question4"
+                value="Concerto"
+                required
+              />
+              <label for="arts-option4-3">Concerto</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option4-4"
+                name="arts-question4"
+                value="Sonata"
+                required
+              />
+              <label for="arts-option4-4">Sonata</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="arts-question5" required
+              >Which art movement was characterized by distorted and exaggerated
+              depictions of reality?</label
+            >
+            <div>
+              <input
+                type="radio"
+                id="arts-option5-1"
+                name="arts-question5"
+                value="Impressionism"
+                required
+              />
+              <label for="arts-option5-1">Impressionism</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option5-2"
+                name="arts-question5"
+                value="Surrealism"
+                required
+              />
+              <label for="arts-option5-2">Surrealism</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option5-3"
+                name="arts-question5"
+                value="Cubism"
+                required
+              />
+              <label for="arts-option5-3">Cubism</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="arts-option5-4"
+                name="arts-question5"
+                value="Realism"
+                required
+              />
+              <label for="arts-option5-4">Realism</label>
+            </div>
+          </div>
+          <!-- More Arts Stream Questions Here -->
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

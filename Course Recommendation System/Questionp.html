@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psychometrics Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(
+          45deg,
+          rgb(55, 55, 131),
+          rgb(213, 110, 213)
+        );
+        width: 100%;
+        height: 100%;
+      }
+
+      .container {
+        max-width: 800px;
+      }
+
+      h2 {
+        font-weight: 800;
+        font-family: "General Sans-Medium";
+        background-color: black;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+
+      .questions {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .question-card {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.951);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .question-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="php/questionp.php" method="post">
+      <h2 class="text-center mb-4">Psychometrics Questions</h2>
+      <div class="container">
+        <div class="questions" id="questions">
+          <!-- Questions will be dynamically added here -->
+          <div class="question-card">
+            <label for="question0"
+              >Are you curious about the natural world and enjoy discovering
+              scientific explanations?</label
+            >
+            <div>
+              <input type="radio" id="yes0" name="question0" value="yes" required/>
+              <label for="yes0">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no0" name="question0" value="no"required />
+              <label for="no0">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question1"
+              >Do you find yourself drawn to subjects like biology, chemistry,
+              and physics?</label
+            >
+            <div>
+              <input type="radio" id="yes1" name="question1" value="yes" required/>
+              <label for="yes1">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no1" name="question1" value="no" required/>
+              <label for="no1">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question2"
+              >Can you see yourself pursuing a career in healthcare,
+              engineering, or research?</label
+            >
+            <div>
+              <input type="radio" id="yes2" name="question2" value="yes"required />
+              <label for="yes2">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no2" name="question2" value="no"required />
+              <label for="no2">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question3"
+              >Are you interested in business, economics, and financial
+              matters?</label
+            >
+            <div>
+              <input type="radio" id="yes3" name="question3" value="yes" required/>
+              <label for="yes3">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no3" name="question3" value="no" required />
+              <label for="no3">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question4"
+              >Do you enjoy analyzing data, spotting market trends, and making
+              informed decisions?</label
+            >
+            <div>
+              <input type="radio" id="yes4" name="question4" value="yes"required />
+              <label for="yes4">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no4" name="question4" value="no" required/>
+              <label for="no4">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question5"
+              >Can you envision yourself learning about accounting, business
+              management, and entrepreneurship?</label
+            >
+            <div>
+              <input type="radio" id="yes5" name="question5" value="yes" required/>
+              <label for="yes5">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no5" name="question5" value="no" required/>
+              <label for="no5">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question6"
+              >Do you have a creative and imaginative mind?</label
+            >
+            <div>
+              <input type="radio" id="yes6" name="question6" value="yes" required/>
+              <label for="yes6">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no6" name="question6" value="no" required/>
+              <label for="no6">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question7"
+              >Are you drawn to literature, languages, and creative
+              writing?</label
+            >
+            <div>
+              <input type="radio" id="yes7" name="question7" value="yes" required/>
+              <label for="yes7">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no7" name="question7" value="no" required/>
+              <label for="no7">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question8"
+              >Does the thought of pursuing a career in writing, fine arts,
+              teaching, or social work resonate with you?</label
+            >
+            <div>
+              <input type="radio" id="yes8" name="question8" value="yes" required/>
+              <label for="yes8">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no8" name="question8" value="no" required/>
+              <label for="no8">No</label>
+            </div>
+          </div>
+          <div class="question-card">
+            <label for="question9"
+              >Do you enjoy tackling challenging problems, analyzing situations,
+              and finding innovative solutions?</label
+            >
+            <div>
+              <input type="radio" id="yes9" name="question9" value="yes" required/>
+              <label for="yes9">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no9" name="question9" value="no" required/>
+              <label for="no9">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <button class="btn btn-primary" id="submitBtn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
